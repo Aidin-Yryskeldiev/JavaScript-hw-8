@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home Work №8</title>
+	</head>
+	<body>
+		<script>
+			// Задача №1
+			for (let i = 1; i <= 100; i++) {
+				console.log(i);
+			}
+
+			// Задача №2
+			for (let i = 2; i <= 100; i += 2) {
+				console.log(i);
+			}
+
+			// Задача №3
+			for (let i = 2; i <= 100; i += 2) {
+				console.log(i);
+			}
+
+			// Задача №4
+			const nums = [10, 20, 30];
+			console.log(nums);
+
+			// Задача №5
+			function getLastValue(array) {
+				if (array.length === 0) {
+					return null;
+				}
+				return array[array.length - 1];
+			}
+			console.log(getLastValue([1, 20, 22, 24, 5]));
+			console.log(getLastValue(["hi", "hello", "good"]));
+
+			// Задача №6
+			for (let i = 5; i >= 0; i--) {
+				console.log(i);
+			}
+
+			// Задача №7
+			let i = 1;
+			while (i <= 100) {
+				console.log(i);
+				i++;
+			}
+
+			// Задача №8
+			let n = 2;
+			while (n <= 100) {
+				console.log(n);
+				n += 2;
+			}
+			//////////////////Здесь не решено
+			// Задача №9 //Не решено
+			function massiv(chickl) {
+				let camelCase = [];
+				for (let number of chickl) {
+					camelCase.push(number + 1);
+				}
+				return camelCase;
+			}
+			let chickl = [1, 2, 3];
+			let result = massiv(chickl);
+			console.log(result);
+
+			// Задача №10 //Не решено
+			function addNum(array, num) {
+				return array.map((x) => x + num);
+			}
+			const result1 = addNum([1, 2, 3], 2);
+			console.log(result1);
+
+			const result2 = addNum([1, 2, 3], 3);
+			console.log(result2);
+
+			const result3 = addNum([-2, -1, 0, 99], 2);
+			console.log(result3);
+
+			// Задача №11 Не решено
+			let stringsfirst = ["hello", "world", "search", "good"];
+			let indexfirst = stringsfirst.indexOf("search");
+			console.log(indexfirst !== -1 ? indexfirst : -1);
+
+			let stringssecond = ["not", "found"];
+			let indexsecond = stringssecond.indexOf("search");
+			console.log(indexsecond !== -1 ? indexsecond : -1);
+
+			// Задача №12 Не решено
+			function numbers(nums) {
+				let numfirst = 0;
+				for (let num of nums) {
+					if (num > 0) {
+						numfirst++;
+					}
+				}
+				return numfirst;
+			}
+
+			console.log(numbers([1, -3, 5]));
+			console.log(numbers([-2, 3, -5, 7, 10]));
+
+			// Задача №13 Не решено
+			function removeEgg(foods) {
+				let result = [];
+				for (let food of foods) {
+					if (food === "egg") {
+						continue;
+					}
+					result.push(food);
+				}
+				return result;
+			}
+			console.log(removeEgg(["egg", "apple", "egg", "ham"]));
+
+			// Задача №14 Не решено
+			function findIndex(array, word) {
+				for (let i = 0; i < array.length; i++) {
+					if (array[i] === word) {
+						return i;
+					}
+				}
+				return -1;
+			}
+			console.log(findIndex(["green", "red", "blue", "red"], "red"));
+			console.log(findIndex(["green", "red", "blue", "red"], "yellow"));
+
+			// Задача №15
+			function addArrays(array1, array2) {
+				let result = [];
+
+				for (let i = 0; i < Math.max(array1.length, array2.length); i++) {
+					const num1 = array1[i] || 0;
+					const num2 = array2[i] || 0;
+					result.push(num1 + num2);
+				}
+
+				return result;
+			}
+
+			console.log(addArrays([1, 1, 2], [1, 1, 3]));
+			console.log(addArrays([1, 2, 3], [4, 5, 6]));
+
+			// Задача №16 Не решено
+			function minMax(nums) {
+				if (nums.length === 0) {
+					return null;
+				}
+
+				let result = {
+					min: nums[0],
+					max: nums[0],
+				};
+
+				for (let i = 1; i < nums.length; i++) {
+					if (nums[i] < result.min) {
+						result.min = nums[i];
+					}
+
+					if (nums[i] > result.max) {
+						result.max = nums[i];
+					}
+				}
+
+				return result;
+			}
+			console.log(minMax([1, -3, 5]));
+			console.log(minMax([-2, 3, -5, 7, 10]));
+
+			// Задача №17 Не решено
+			function countWords(words) {
+				let wordCount = {};
+
+				for (let i = 0; i < words.length; i++) {
+					let word = words[i];
+					if (wordCount[word]) {
+						wordCount[word]++;
+					} else {
+						wordCount[word] = 1;
+					}
+				}
+				return wordCount;
+			}
+			console.log(countWords(["apple", "grape", "apple", "apple"]));
+		</script>
+	</body>
+</html>
